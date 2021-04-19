@@ -1,0 +1,23 @@
+#!/bin/bash
+arg1=$1
+arg2=$2
+cd "C:\Users\Corvin Frei\Documents\Schule\DBCommandTool\target"
+rm Output.txt
+rm Log.txt
+java -cp "./CorvinsAdventureSQL-1.0-SNAPSHOT.jar;./lib/mysql-connector-java-8.0.23.jar;./lib/protobuf-java-3.11.4.jar" de.bdess.dct.DBConnection $arg1 $arg2
+case $arg1 in
+	-i)
+	echo
+	cat Output.txt
+	echo
+;;
+*)
+	echo
+	echo -n "Inhalt meiner Ausgabedatei: "
+	cat Output.txt
+	echo
+	echo
+	echo -n "Inhalt meiner Logdatei: "
+	cat Log.txt
+;;
+esac
