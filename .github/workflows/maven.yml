@@ -5,9 +5,9 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -26,12 +26,3 @@ jobs:
 
       - name: Step 3 Build project with Maven
         run: mvn -B package --file pom.xml
-
-  jobs:
-    build:
-
-      runs-on: ubuntu-latest
-
-      steps:
-        -name: Step 1 WalkingTest
-        run:
