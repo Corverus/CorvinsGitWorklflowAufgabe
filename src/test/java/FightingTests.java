@@ -17,8 +17,8 @@ public class FightingTests {
     private Account myAcc;
     private List<Player> team;
 
-    FightingTests(){
-        myPlayer = new Player("Dude",10,100,1,1,new WebShot());
+    public FightingTests(){
+        myPlayer = new Player("Dude",10,100,11,1,new WebShot());
         myAcc = new Account(myPlayer,"Dudus");
         myEnemy = new Enemy("???",10,5,1,6,200,new Crowbar());
         enemyTeam = new ArrayList();
@@ -26,7 +26,7 @@ public class FightingTests {
         team = myAcc.getParty();
     }
     @Test
-    void fightQuestionmark(){
+    public void fightQuestionmark(){
         myFight = new Fight(team,enemyTeam);
         assertEquals(6,team.get(0).getCurrentLP());
     }
