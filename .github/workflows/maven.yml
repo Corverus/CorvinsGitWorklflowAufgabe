@@ -27,8 +27,7 @@ jobs:
       - name: Step 3 Build project with Maven
         run: mvn -B package --file pom.xml
 
-      - name: Step 4 WalkingTest
+      - name: Step 4 Tests
         run: mvn test
 
-      - name: Step 5 FightingTest
-        run:
+
