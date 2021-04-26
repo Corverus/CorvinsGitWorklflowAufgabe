@@ -16,10 +16,18 @@ public class WalkingTests {
         myLevel = new Level1(myAccount);
     }
     @Test
-    void goToJoesArena(){
+    void goHome(){
         myLevel.move("s");
         myLevel.move("o");
         myLevel.move("s");
         assertEquals("Joe's Arena",myLevel.getCurrentRoom().getDescription());
+        myLevel.examine();
+        myLevel.move("n");
+        myLevel.move("w");
+        myLevel.move("w");
+        myLevel.move("s");
+        myLevel.move("o");
+        myLevel.move("s");
+        assertEquals("Zuhause",myLevel.getCurrentRoom().getDescription());
     }
 }

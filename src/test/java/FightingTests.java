@@ -27,7 +27,6 @@ public class FightingTests {
     }
     @Test
     public void fightQuestionmark(){
-        myFight = new Fight(team,enemyTeam);
-        assertEquals(6,team.get(0).getCurrentLP());
+        
     }
 }
